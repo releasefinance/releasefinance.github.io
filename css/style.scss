@@ -3,6 +3,9 @@
 # only Main files contain this front matter, not partials.
 ---
 
-// Imports
-// @import "base";
-@import "layout";
+// We're using Skeleton for base level styling
+// http://getskeleton.com/
+// See docs for grid, buttons, forms typography etc.
+@import "vendor/normalize";
+@import "vendor/skeleton";
+
