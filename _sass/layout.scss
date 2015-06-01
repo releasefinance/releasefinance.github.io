@@ -5,12 +5,41 @@ section.content {
 }
 
 .header {
-  padding: 50px 0;
+  padding: 50px 0 0px 0;
 }
 
 .header .container {
   padding-bottom: 20px;
   border-bottom: solid 1px #C3C3C3;
+}
+
+.header__logo {
+  @extend .columns;
+  @extend .three;
+  position: relative;
+}
+
+.header__logo a {
+  width: 50%;
+  display: block;
+  @media (min-width: 450px) {
+    width: 100%;
+  }
+}
+
+.header__logo img {
+  width: 100%;
+  display: block;
+}
+
+
+.header__menu {
+  display: none;
+  @extend .columns;
+  @extend .nine;
+  @media (min-width: 450px) {
+    display: block;
+  }
 }
 
 .header__menu  ul {
@@ -36,7 +65,10 @@ section.content {
 
 .intro {
   position: relative;
-  margin-bottom: 3em;
+  margin-bottom: 0;
+  @media (min-width: 450px) {
+    margin-bottom: 3em;
+  }
 }
 
 .intro__header {
@@ -52,13 +84,19 @@ section.content {
 
 .intro__img {
   display: block;
-  position: absolute;
-  bottom: 0;
-  width: 48%;
-  height: 100%;
-  background-position: bottom left;
+  position: relative;
+  width: 100%;
+  height: 200px;
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width: 450px) {
+    position: absolute;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    background-position: bottom left;
+  }
 }
 
 .intro__cta a {
