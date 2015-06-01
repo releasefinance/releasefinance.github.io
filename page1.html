@@ -1,7 +1,52 @@
 ---
 layout: default
 
-intro : This is an intro
+intro:
+  header : Own that car you really want
+  desc   : Release is the new way to finance that car you've always wanted/ The more you share your car with friends or your community, the less you pay.
+  cta    : Sign up now
+
+howitworks:
+  header : How It Works
+  step1  : Step 1
+  step2  : Step 2
+  step3  : Step 3
+
 ---
 
-{{ page.intro }}
+<div class="header">
+  <div class="header__logo"></div>
+  <div class="header__menu">
+    <ul>
+      <li>How It Works</li>
+      <li>Cars Avaiable</li>
+      <li>Sign Up Now</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="intro">
+
+  <h1 class="intro__header">
+    {{ page.intro.header }}
+  </h1>
+
+  <div class="intro__desc">
+    {{ page.intro.desc }}
+  </div>
+
+  <div class="cta">
+    <a href="" class="button">{{ page.intro.cta }}</a>
+  </div>
+
+</div>
+
+<div class="howitworks">
+  <h2>{{ page.howitworks.header }}</h2>
+  <div class="howitworks__step howitworks__step-1">{{ page.howitworks.step1 }}</div>
+  <div class="howitworks__step howitworks__step-2">{{ page.howitworks.step2 }}</div>
+  <div class="howitworks__step howitworks__step-3">{{ page.howitworks.step3 }}</div>
+</div>
+
+
