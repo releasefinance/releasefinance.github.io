@@ -1,5 +1,16 @@
+$brand-border : #C3C3C3;
+
 section.content {
-  padding: 2em 0;
+  padding: 3em 0;
+}
+
+.header {
+  padding: 50px 0;
+}
+
+.header .container {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #C3C3C3;
 }
 
 .header__menu  ul {
@@ -13,6 +24,21 @@ section.content {
   display: inline-block;
 }
 
+.header__menu  li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 20px;
+  color: #858585;
+  &:hover {
+    color: #000;
+  }
+}
+
+.intro {
+  position: relative;
+  margin-bottom: 3em;
+}
+
 .intro__header {
   @extend .columns;
   @extend .twelve;
@@ -24,10 +50,117 @@ section.content {
   float: right;
 }
 
+.intro__img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 48%;
+  height: 100%;
+  background-position: bottom left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.intro__cta a {
+  font-family: 'InputSans-Bold';
+  text-transform: none;
+  font-size: 1.2em;
+  width: 100%;
+  // background: #F7F7F7;
+  // border: solid 1px $brand-border;
+  height: auto;
+  line-height: 4em;
+  background: #FFB943;
+  color: #956513;
+  border: none;
+  &:hover {
+    background: lighten(#FFB943, 2);
+  }
+}
+
+.howitworks {
+  background: #F7F7F7;
+  border-top: solid 1px $brand-border;
+  border-bottom: solid 1px $brand-border;
+  position: relative;
+  overflow: hidden;
+}
+
+.howitworks__steps {
+  @extend .columns;
+  @extend .six;
+}
+
+.howitworks__img {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background-position: bottom left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.howitworks__img img {
+  display: block;
+}
+
+.howitworks__step {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+.howitworks__step span {
+  margin-right: 1em;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border: solid 1px $brand-border;
+  border-radius: 100px;
+  text-align: center;
+  float: left;
+}
+
+.howitworks__step div {
+  padding-top: .55em;
+  overflow: hidden;
+}
+
+.testimonial {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .testimonial__bubble,
 .testimonial__image {
   @extend .columns;
   @extend .six;
+}
+
+.testimonial__bubble {
+  background: rgba(225,225,225,.9);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.testimonial__name {
+  @extend strong;
+  margin-top: 1em;
+}
+
+.testimonial__image {
+  text-align: center;
+}
+
+.testimonial__image img {
+  display: inline-block;
 }
 
 .cars ul {
@@ -46,8 +179,29 @@ section.content {
   padding: 0 40px;
 }
 
-.outro {
+.car__name {
   text-align: center;
+}
+
+section.outro.content {
+  text-align: center;
+  background: url('/assets/images/outro_bg.png') center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.outro .button {
+  background: #FFB943;
+  color: #956513;
+  border: none;
+  height: auto;
+  line-height: 3em;
+  text-transform: none;
+  padding: 0 50px;
+  font-size: 1.5em;
+  margin-bottom: 4em;
 }
 
 .outro__header,
@@ -62,4 +216,21 @@ section.content {
 
 .outro__cta a {
   @extend .button;
+}
+
+.feature {
+  @extend .columns;
+  @extend .four;
+}
+
+.feature__img {
+  text-align: center;
+  margin-bottom: 1em;
+  img {
+    display: inline-block;
+  }
+}
+
+.center {
+  text-align: center;
 }
