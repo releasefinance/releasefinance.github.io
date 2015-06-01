@@ -1,0 +1,65 @@
+section.content {
+  padding: 2em 0;
+}
+
+.header__menu  ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu  li {
+  display: inline-block;
+}
+
+.intro__header {
+  @extend .columns;
+  @extend .twelve;
+}
+
+.intro__desc {
+  @extend .columns;
+  @extend .six;
+  float: right;
+}
+
+.testimonial__bubble,
+.testimonial__image {
+  @extend .columns;
+  @extend .six;
+}
+
+.cars ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.car {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 1em;
+}
+
+.car > div {
+  padding: 0 40px;
+}
+
+.outro {
+  text-align: center;
+}
+
+.outro__header,
+.outro__cta {
+  display: inline-block;
+  width: 100%;
+}
+
+.outro__header {
+  @extend h1;
+}
+
+.outro__cta a {
+  @extend .button;
+}

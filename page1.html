@@ -12,41 +12,118 @@ howitworks:
   step2  : Step 2
   step3  : Step 3
 
+testimonial:
+  quote : With our family quickly growing we needed a bigger 2nd car for weekend family trips. Release allowed us to go for the Land Rover we really wanted but couldn’t quite afford. We save costs by sharing it with friends during the week, we help them out and have our perfect car.
+  name  : Louise + Ryan Henry
+  img   : testimonial_page_1.png
+
+cars:
+  header : Cars available on release
+
+car_list :
+  - name     : Car
+    img      : img.png
+  - name     : Car
+    img      : img.png
+  - name     : Car
+    img      : img.png
+  - name     : Car
+    img      : img.png
+  - name     : Car
+    img      : img.png
+  - name     : Car
+    img      : img.png
+
+outro:
+  header: Own that dream car today
+  cta   : Sign up now
+
 ---
 
 <div class="header">
-  <div class="header__logo"></div>
-  <div class="header__menu">
-    <ul>
-      <li>How It Works</li>
-      <li>Cars Avaiable</li>
-      <li>Sign Up Now</li>
-    </ul>
+  <div class="container">
+    <div class="row">
+      <div class="header__logo two columns">
+        <img src="">
+      </div>
+      <div class="header__menu ten columns">
+        <ul>
+          <li><a href="">How It Works</a></li>
+          <li><a href="">Cars Avaiable</a></li>
+          <li><a class="button" href="">Sign Up Now</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
 
-<div class="intro">
+<section class="content intro">
+  <div class="container">
+    <div class="row">
 
-  <h1 class="intro__header">
-    {{ page.intro.header }}
-  </h1>
+      <h1 class="intro__header">
+        {{ page.intro.header }}
+      </h1>
 
-  <div class="intro__desc">
-    {{ page.intro.desc }}
+      <div class="intro__desc">
+        {{ page.intro.desc }}
+        <div class="cta">
+          <a href="" class="button">{{ page.intro.cta }}</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="cta">
-    <a href="" class="button">{{ page.intro.cta }}</a>
+</section >
+
+<section  class="content howitworks">
+  <div class="container">
+    <div class="row">
+      <h2>{{ page.howitworks.header }}</h2>
+      <div class="howitworks__step howitworks__step-1">{{ page.howitworks.step1 }}</div>
+      <div class="howitworks__step howitworks__step-2">{{ page.howitworks.step2 }}</div>
+      <div class="howitworks__step howitworks__step-3">{{ page.howitworks.step3 }}</div>
+    </div>
   </div>
+</section >
 
-</div>
+<section  class="content testimonal">
+  <div class="container">
+    <div class="row">
+      <div class="testimonial__bubble">
+        <div class="testimonial__quote">{{ page.testimonial.quote }}</div>
+        <div class="testimonial__name">{{ page.testimonial.name}}</div>
+      </div>
+      <div class="testimonial__image">
+        <img src="">
+      </div>
+    </div>
+  </div>
+</section >
 
-<div class="howitworks">
-  <h2>{{ page.howitworks.header }}</h2>
-  <div class="howitworks__step howitworks__step-1">{{ page.howitworks.step1 }}</div>
-  <div class="howitworks__step howitworks__step-2">{{ page.howitworks.step2 }}</div>
-  <div class="howitworks__step howitworks__step-3">{{ page.howitworks.step3 }}</div>
-</div>
+<section class="content cars">
+  <div class="container">
+    <div class="row">
+      <ul>
+        {% for car in page.car_list %}
+          <li class="car">
+            <div class="car__img">
+              <img src="{{car.img}}">
+            </div>
+            <div class="car__name">{{car.name}}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section >
 
-
+<section class="content outro">
+  <div class="container">
+    <div class="row">
+      <div class="outro__header">{{page.outro.header}}</div>
+      <div class="outro__cta"><a href="">{{page.outro.cta}}</a></div>
+    </div>
+  </div>
+</section>
