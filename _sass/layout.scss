@@ -37,7 +37,7 @@ section.content {
   display: none;
   @extend .columns;
   @extend .nine;
-  @media (min-width: 450px) {
+  @media (min-width: 800px) {
     display: block;
   }
 }
@@ -90,7 +90,7 @@ section.content {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  @media (min-width: 450px) {
+  @media (min-width: 521px) {
     position: absolute;
     bottom: 0;
     width: 48%;
@@ -116,32 +116,37 @@ section.content {
   }
 }
 
-.howitworks {
+section.content.howitworks {
   background: #F7F7F7;
   border-top: solid 1px $brand-border;
   border-bottom: solid 1px $brand-border;
   position: relative;
   overflow: hidden;
+  padding-bottom: 0;
 }
 
 .howitworks__steps {
+  @media (max-width: 880px) {
+    width: 100%;
+  }
   @extend .columns;
   @extend .six;
 }
 
 .howitworks__img {
   display: block;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  width: 48%;
-  height: 100%;
-  background-position: bottom left;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  text-align: center;
+  @media (min-width: 880px) {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 48%;
+    height: 100%;
+  }
 }
 
 .howitworks__img img {
+  margin: 0 auto;
   display: block;
 }
 
@@ -171,7 +176,7 @@ section.content {
 }
 
 .testimonial {
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -195,6 +200,7 @@ section.content {
 
 .testimonial__image {
   text-align: center;
+  margin-top: 1em;
 }
 
 .testimonial__image img {
@@ -209,8 +215,14 @@ section.content {
 
 .car {
   float: left;
-  width: 33.3%;
   margin-bottom: 1em;
+  @media (max-width: 520px) {
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    width: 50%;
+  }
+  width: 33.3%;
 }
 
 .car > div {
@@ -221,10 +233,14 @@ section.content {
   text-align: center;
 }
 
+.car__img {
+  text-align: center;
+}
+
 section.outro.content {
   text-align: center;
   background: url('/assets/images/outro_bg.png') center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   padding: 100px 0;
