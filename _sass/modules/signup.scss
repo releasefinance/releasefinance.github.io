@@ -1,0 +1,39 @@
+html,
+body.signup {
+  height: 100%;
+}
+
+body.signup {
+  background: url(/assets/images/release_signup_bg.jpg) fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.signup-logo,
+.signup-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.signup-logo {
+  width: 580px;
+  margin-top: 100px;
+}
+
+.signup-form {
+  background: #fff;
+  display: block;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.signup-form {
+  input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea {
+    width: 100% !important;
+  }
+  button {
+    float: right;
+  }
+}
