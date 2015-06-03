@@ -275,6 +275,7 @@ section.outro.content {
 .feature {
   @extend .columns;
   @extend .four;
+  padding: 40px 0;
 }
 
 .feature__img {

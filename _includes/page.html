@@ -94,10 +94,10 @@
     <div class="row">
       <h2 class="center">{{page.cars.header}}</h2>
       <ul>
-        {% for car in page.car_list %}
+        {% for car in site.data.cars.car_list %}
           <li class="car">
             <div class="car__img">
-              <img src="/assets/images/{{car.img}}">
+              <img src="/assets/images/car_thumbs/{{car.img}}">
             </div>
             <div class="car__name">{{car.name}}</div>
           </li>
