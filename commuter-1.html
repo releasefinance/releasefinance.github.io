@@ -1,0 +1,179 @@
+---
+layout: default
+title : Release
+description : Get Release now
+
+intro:
+  header : Own that car you really want
+  desc   : |
+    <p>Release is the new way to finance that car you've always wanted but couldn't quite justify.</p>
+    <p>Choose the car of your dreams and lend it occasionally to friends or your community to reduce the cost.</p>
+  cta    : Choose Car
+  image  : intro_car_1.png
+
+howitworks:
+  header : How It Works
+  step1  : Sign-up to Release and choose your car
+  step2  : Decide how often and when to lend your car to friends or neighbours
+  step3  : Reduce your monthly costs and enjoy owning a car you really love
+  image  : howitworks_ui_1.png
+
+testimonial:
+  quote : I'd love a premium exec or sports car but can't quite justify it. I usually commute into the city by train in the week and really would only use it at the weekend or to get to the station. Until now it always seemed overly indulgent and a bad investment to have it sat there on the drive most of the time.
+  name  : Tom Stafford
+  image   : testimonial_people_1.png
+  bg    : testimonial_bg_1.png
+
+feature_list :
+  - text : Your dream car now makes rational finanical sense as well as emotional
+    header : Save money
+    img : img_1.png
+  - text : Choose the car you really would love without compromising 
+    header : Upgrade to your dream car
+    img : img_2.png
+  - text : Choose how often, when and to who you lend it for total peace of mind
+    header : Flexible Lending
+    img : img_3.png
+cars:
+  header : Cars available on release
+
+car_list :
+  - name     : Jaguar XE
+    img      : car_1.png
+  - name     : Land Rover Evoque
+    img      : car_2.png
+  - name     : Jaguar F Type
+    img      : car_3.png
+  - name     : Jaguar XE
+    img      : car_1.png
+  - name     : Land Rover Evoque
+    img      : car_2.png
+  - name     : Jaguar F Type
+    img      : car_3.png
+
+outro:
+  header: Own your dream car today
+  cta   : Choose Car
+
+---
+
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__logo">
+        <a href="/"><img src="/assets/images/release_logo.svg"></a>
+      </div>
+      <div class="header__menu">
+        <ul>
+          <li><a href="#howitworks">How It Works</a></li>
+          <li><a href="#cars">Cars Avaiable</a></li>
+          <li><a class="button" href="">Sign Up Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="content intro">
+  <div class="container">
+    <div class="row">
+
+      <h1 class="intro__header">
+        {{ page.intro.header }}
+      </h1>
+
+      <div class="intro__desc">
+        {{ page.intro.desc }}
+        <div class="intro__cta">
+          <a href="" class="button">{{ page.intro.cta }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="intro__img" style="background-image: url('/assets/images/{{page.intro.image}}')"></div>
+
+</section >
+
+<section  class="content howitworks" id="howitworks">
+  <div class="container">
+    <div class="row">
+      <h2>{{ page.howitworks.header }}</h2>
+      <div class="howitworks__steps">
+        <div class="howitworks__step howitworks__step-1">
+          <span>1</span>
+          <div>{{ page.howitworks.step1 }}</div>
+        </div>
+        <div class="howitworks__step howitworks__step-2">
+          <span>2</span>
+          <div>{{ page.howitworks.step2 }}</div>
+        </div>
+        <div class="howitworks__step howitworks__step-3">
+          <span>3</span>
+          <div>{{ page.howitworks.step3 }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="howitworks__img">
+    <img src="/assets/images/{{page.howitworks.image}}">
+  </div>
+
+</section >
+
+<section  class="content testimonial" style="background-image: url('/assets/images/{{page.testimonial.bg}}');">
+  <div class="container">
+    <div class="row">
+      <div class="testimonial__bubble">
+        <div class="testimonial__quote">{{ page.testimonial.quote }}</div>
+        <div class="testimonial__name">{{ page.testimonial.name}}</div>
+      </div>
+      <div class="testimonial__image">
+        <img src='/assets/images/{{page.testimonial.image}}'>
+      </div>
+    </div>
+  </div>
+</section >
+
+<section class="content features">
+  <div class="container">
+    <div class="row">
+      {% for feature in page.feature_list %}
+        <div class="feature">
+          <div class="feature__img"><img src="{{feature.img}}"></div>
+          <div class="feature__text">{{feature.text}}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="content cars" id="cars">
+  <div class="container">
+    <div class="row">
+      <h2 class="center">{{page.cars.header}}</h2>
+      <ul>
+        {% for car in page.car_list %}
+          <li class="car">
+            <div class="car__img">
+              <img src="/assets/images/{{car.img}}">
+            </div>
+            <div class="car__name">{{car.name}}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section >
+
+<section class="content outro">
+  <div class="container">
+    <div class="row">
+      <div class="outro__header">{{page.outro.header}}</div>
+      <div class="outro__cta"><a href="">{{page.outro.cta}}</a></div>
+      <div class="outro__logo">
+        <img src="/assets/images/release_logo_white.svg">
+      </div>
+    </div>
+  </div>
+</section>
