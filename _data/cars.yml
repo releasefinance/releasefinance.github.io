@@ -2,13 +2,13 @@ car_list :
   - name     : Discovery
     img      : Discovery.png
   - name     : Freelander
-    img      : freelander.png
+    img      : Freelander.png
   - name     : Jaguar F Type
     img      : Jaguar-Ftype.png
   - name     : Jaguar XE
     img      : Jaguar-XE.png
   - name     : Jaguar XJ
-    img      : jaguar-xj.png
+    img      : Jaguar-XJ.png
   - name     : Range Rover Evoque
     img      : RangeRoverEvoque.png
   - name     : Range Rover
