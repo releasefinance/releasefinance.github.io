@@ -9,7 +9,7 @@ var rangeAdjust = function(value) {
   $('._total').html(shares);
   $('._discountedPrice').html('£' + discountedPrice);
 
-  analytics.track('evoque shares', {shares: shares, discounted_price: discountPrice});
+  analytics.track('evoque shares', {shares: shares, discounted_price: discountedPrice});
 
 }
 
