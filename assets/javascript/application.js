@@ -1,5 +1,5 @@
 var rangeAdjust = function(value) {
-  if($("#fixedprice") == []) {
+  if($("#fixedprice").length == 0) {
     return;
   }
   var shares          = value;
