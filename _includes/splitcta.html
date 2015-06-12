@@ -2,7 +2,7 @@
   <div class="price-desc center">
     <div class="container">
       <h2>{{page.price.header}}</h2>
-      <p>{{page.price.description}}</p>
+      <p class="lead">{{page.price.description}}</p>
     </div>
   </div>
   <div class="prices">
@@ -65,7 +65,7 @@
             </p>
           </div>
           <div class="price__cta">
-            <div class="error">You must share your car to select this price</div>
+            <div class="error">{{page.price.shared.error}}</div>
             <a href="" class="button track">{{page.price.cta}}</a>
           </div>
         </div>
