@@ -28,8 +28,8 @@
 <section class="content splitcta">
   <div class="price-desc center">
     <div class="container">
-      <h2>Choose your price</h2>
-      <p>With Release you can reduce you monthly costs by sharing your car. The more you share, the more you save. Select the amount of days you’d like to share and the price that suits you...</p>
+      <h2>{{page.price.header}}</h2>
+      <p>{{page.price.description}}</p>
     </div>
   </div>
   <div class="prices">
@@ -37,22 +37,21 @@
       <div class="row">
         <div class="half price price-fixed">
           <div class="price__total">
-            <span class="num" id="fixedprice">£400</span>
-            <span class="text">Per month</span>
+            <span class="num" id="fixedprice">{{page.price.fixed.price}}</span>
+            <span class="text">{{page.price.fixed.price__text}}</span>
           </div>
           <div class="price__content">
-            <p>No sharing</p>
-            <p>Normal lease</p>
+            {{page.price.fixed.content}}
           </div>
           <div class="price__cta">
-            <a href="/signup" class="button">Get quote now</a>
+            <a href="/signup" class="button">{{page.price.cta}}</a>
           </div>
         </div>
 
         <div class="half price price-share">
           <div class="price__total">
-            <span class="num" id="discountedPrice">£400</span>
-            <span class="text">Per month</span>
+            <span class="num" id="discountedPrice"></span>
+            <span class="text">{{page.price.shared.price}}</span>
           </div>
 
           <div class="price__content price__content-range">
@@ -92,7 +91,7 @@
             </p>
           </div>
           <div class="price__cta">
-            <a href="/signup" class="button">Get quote now</a>
+            <a href="/signup" class="button">{{page.price.cta}}</a>
           </div>
         </div>
       </div>
