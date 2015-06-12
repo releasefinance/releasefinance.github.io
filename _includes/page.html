@@ -8,7 +8,7 @@
         <ul>
           <li><a href="#howitworks">How It Works</a></li>
           <li><a href="#cars">Cars Available</a></li>
-          <li><a class="button" href="{{page.cta-link}}">{{site.data.shared.header.cta}}</a></li>
+          <li><a class="button track" id="page-header-cta" href="{{page.cta-link}}">{{site.data.shared.header.cta}}</a></li>
         </ul>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="intro__desc">
         {{ page.intro.desc }}
         <div class="intro__cta">
-          <a href="{{ page.cta-link }}" class="button">{{ page.intro.cta }}</a>
+          <a href="{{ page.cta-link }}" id="page-intro-cta" class="button track">{{ page.intro.cta }}</a>
         </div>
       </div>
     </div>
@@ -111,7 +111,7 @@
   <div class="container">
     <div class="row">
       <div class="outro__header">{{page.outro.header}}</div>
-      <div class="outro__cta"><a href="{{ page.cta-link }}">{{page.outro.cta}}</a></div>
+      <div class="outro__cta"><a id="page-outro-cta" href="{{ page.cta-link }}" class="track">{{page.outro.cta}}</a></div>
       <div class="outro__logo">
         <img src="/assets/images/release_logo_white.svg">
       </div>
