@@ -310,3 +310,14 @@ section.outro.content {
     width: 200px;
   }
 }
+
+.logos .logo {
+  @extend .columns;
+  @extend .six;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.logos .logo img {
+  display: inline-block;
+}
