@@ -131,3 +131,18 @@
   margin-top: 50px;
   padding-bottom: 80px;
 }
+
+.error {
+  display: none;
+  background: #FFE5E5;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #FF6060;
+  border: solid 1px #FF6060;
+  text-align: center;
+}
+
+.error.active {
+  display: block;
+}
