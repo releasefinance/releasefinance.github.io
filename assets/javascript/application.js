@@ -17,7 +17,7 @@ var rangeAdjust = function(value) {
 $(document).ready(function() {
   rangeAdjust(0);
 
-  $('.button').on('click', function(e) {
+  $('.price-share .button').on('click', function(e) {
     e.preventDefault();
     console.log('hi')
     var input = $(this).parents('.price').find('input');
