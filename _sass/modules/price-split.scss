@@ -45,13 +45,14 @@
   font-size: 20px;
   @media (max-width: 800px) {
     font-size: 13px;
+    padding: 10px 20px 10px 20px;
   }
 }
 
 .price__content {
   height: 120px;
   @media (max-width: 800px) {
-    height: 60px;
+    height: 100px;
   }
 }
 
@@ -81,6 +82,10 @@
 
 .price__cta {
   padding: 20px;
+  @media (max-width: 800px) {
+    padding: 5px;
+    margin-top: 5px;
+  }
 }
 
 .price__cta .button {

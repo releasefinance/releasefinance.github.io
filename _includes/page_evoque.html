@@ -38,7 +38,7 @@
         <div class="half price price-fixed">
           <div class="price__total">
             <span class="num" id="fixedprice">{{page.price.fixed.price}}</span>
-            <span class="text">{{page.price.fixed.price__text}}</span>
+            <span class="text">{{page.price.fixed.price_text}}</span>
           </div>
           <div class="price__content">
             {{page.price.fixed.content}}
@@ -50,8 +50,8 @@
 
         <div class="half price price-share">
           <div class="price__total">
-            <span class="num" id="discountedPrice"></span>
-            <span class="text">{{page.price.shared.price}}</span>
+            <span class="num _discountedPrice"></span>
+            <span class="text">{{page.price.shared.price_text}}</span>
           </div>
 
           <div class="price__content price__content-range">
@@ -59,7 +59,7 @@
               <input type="range" name="shares" min="0" max="20" value="0" onchange="rangeAdjust(this.value)">
             </p>
             <p>
-              Sharing <span class="total" id="total">0</span> days a month
+              Sharing <span class="total _total">0</span> days a month
             </p>
           </div>
 
@@ -139,7 +139,81 @@
   </div>
 </section >
 
-<section class="content outro">
+<section class="content splitcta">
+  <div class="price-desc center">
+    <div class="container">
+      <h2>{{page.price.header}}</h2>
+      <p>{{page.price.description}}</p>
+    </div>
+  </div>
+  <div class="prices">
+    <div class="container">
+      <div class="row">
+        <div class="half price price-fixed">
+          <div class="price__total">
+            <span class="num" id="fixedprice">{{page.price.fixed.price}}</span>
+            <span class="text">{{page.price.fixed.price_text}}</span>
+          </div>
+          <div class="price__content">
+            {{page.price.fixed.content}}
+          </div>
+          <div class="price__cta">
+            <a href="/signup" class="button">{{page.price.cta}}</a>
+          </div>
+        </div>
+
+        <div class="half price price-share">
+          <div class="price__total">
+            <span class="num _discountedPrice"></span>
+            <span class="text">{{page.price.shared.price_text}}</span>
+          </div>
+
+          <div class="price__content price__content-range">
+            <p class="range">
+              <input type="range" name="shares" min="0" max="20" value="0" onchange="rangeAdjust(this.value)">
+            </p>
+            <p>
+              Sharing <span class="total _total">0</span> days a month
+            </p>
+          </div>
+
+          <div class="price__content price__content-dropdown">
+            <p>
+              Sharing
+              <select onchange="rangeAdjust(this.value)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select> days a month
+            </p>
+          </div>
+          <div class="price__cta">
+            <a href="/signup" class="button">{{page.price.cta}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="content outro">
   <div class="container">
     <div class="row">
       <div class="outro__header">{{page.outro.header}}</div>
@@ -149,4 +223,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
