@@ -6,8 +6,11 @@ var rangeAdjust = function(value) {
 
   $('#total').html(shares);
   $('#discountedPrice').html('£' + discountedPrice);
+  $('._total').html(shares);
+  $('._discountedPrice').html('£' + discountedPrice);
 
   analytics.track('evoque shares', {shares: shares, discounted_price: discountPrice});
+
 }
 
 $(document).ready(function() {
