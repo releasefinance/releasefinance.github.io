@@ -1,4 +1,7 @@
 var rangeAdjust = function(value) {
+  if($("#fixedprice").length == 0) {
+    return;
+  }
   var shares          = value;
   var price           = $("#fixedprice").html().replace(/\u00A3/g, '');
   var discountedPrice = Math.floor((20 - shares) * (price / 20.0 ))
