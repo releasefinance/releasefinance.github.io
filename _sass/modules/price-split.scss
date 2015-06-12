@@ -14,6 +14,12 @@
   margin-right: 5%;
 }
 
+.price-fixed .price__content p:first-child {
+  @media (max-width: 801px) {
+    padding-top: 20px;
+  }
+}
+
 .price__total {
   background: #393939;
   text-align: center;
