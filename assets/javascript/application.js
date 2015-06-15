@@ -22,10 +22,12 @@ $(document).ready(function() {
 
   $('.price-share .button').on('click', function(e) {
     e.preventDefault();
-    console.log('hi')
+
     var input = $(this).parents('.price').find('input');
     var value = $(input).val();
-    // console.log($(this).parents('.price').find('input'))
+
+    analytics.track('evoque share button clicked', {shares: value});
+
     if(value == 0) {
       $('.error').addClass('active');
     } else {
