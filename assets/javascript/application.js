@@ -31,7 +31,7 @@ $(document).ready(function() {
     if(value == 0) {
       $('.error').addClass('active');
     } else {
-      window.location.href = '/signup.html';
+      window.location.href = '/signup-with-sharing.html';
     }
   });
 });
