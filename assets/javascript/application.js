@@ -1,3 +1,23 @@
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function populateHiddenShares(shares) {
+  $('input[name="shares"]').val(shares);
+}
+
+function trackShareSignUpClick() {
+  var shares = parseInt(getParameterByName('s'));
+  var email  = $('input[name="email"]').val();
+  var name   = $('input[name="name"]').val();
+
+  populateHiddenShares(shares);
+  analytics.track('share signup', {shares: shares, email: email, name: name});
+}
+
 var rangeAdjust = function(value) {
   if($("#fixedprice").length == 0) {
     return;
@@ -31,7 +51,13 @@ $(document).ready(function() {
     if(value == 0) {
       $('.error').addClass('active');
     } else {
-      window.location.href = '/signup-with-sharing.html';
+      var url = '/signup-with-sharing.html?s=' + value
+      window.location.href = url;
     }
+  });
+
+  $("#share-signup-button").on('click', function(e){
+    trackShareSignUpClick();
+     // e.preventDefault();
   });
 });
